@@ -52,14 +52,8 @@ nav {
 .logo-placeholder {
     width: 44px;
     height: 44px;
-    object-fit: cover;
-    background-color: var(--primary-color);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    border-radius: 4px;
+    object-fit: contain;
+    display: block;
 }
 
 .lab-name {
