@@ -77,7 +77,7 @@ body {
 
 .lab-subtitle {
     font-size: 15px;
-    color: #E84A27; /* Updated to Illini Orange to match typical UIUC headers */
+    color: #E84A27; 
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
@@ -107,11 +107,11 @@ body {
 }
 
 .block-i {
-    height: 54px; /* Scaled up slightly to balance with the lab logo */
+    height: 54px; 
     width: auto;
 }
 
-/* Navigation Container (Sits below branding) */
+/* Navigation Container */
 .nav-container {
     display: flex;
     padding: 0 20px 15px 20px;
