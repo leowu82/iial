@@ -13,8 +13,8 @@ async function loadPartial(element, path) {
 }
 
 async function loadSiteHeader() {
-    const headerMount = document.querySelector('[data-site-header]');
-    const footerMount = document.querySelector('[data-site-footer]');
+    const headerMount = document.querySelector('[data-header]');
+    const footerMount = document.querySelector('[data-footer]');
 
     await Promise.all([
         loadPartial(headerMount, '/header.html'),
