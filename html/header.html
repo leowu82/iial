@@ -1,15 +1,38 @@
-<header>
-    <nav>
-        <a href="/index.html" class="logo-container">
-            <img src="/assets/images/illinois-block-i.svg" alt="University of Illinois Urbana-Champaign" class="logo-placeholder">
-            <span class="lab-name">Information Integrity and Assessment Lab</span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="/index.html" data-nav="home">Home</a></li>
-            <li><a href="/people.html" data-nav="people">People</a></li>
-            <li><a href="/projects.html" data-nav="projects">Projects</a></li>
-            <li><a href="/publications.html" data-nav="publications">Publications</a></li>
-            <li><a href="/contact.html" data-nav="contact">Contacts</a></li>
-        </ul>
-    </nav>
+<header class="main-header">
+    <!-- Top University Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <a href="https://illinois.edu" class="uni-link">
+                <!-- Ensure illinois-block-i.svg is in this path -->
+                <img src="assets/images/illinois-block-i.svg" alt="University of Illinois" class="block-i">
+                UNIVERSITY OF ILLINOIS URBANA-CHAMPAIGN
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="nav-container container">
+        <div class="site-branding">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo.png" alt="Logo" class="logo">
+                <div class="branding-text">
+                    <h1 class="lab-title">Information Integrity and Assessment Lab</h1>
+                    <span class="lab-subtitle">School of Information Sciences</span>
+                </div>
+            </a>
+        </div>
+
+        <nav class="main-nav">
+            <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="people.html">People</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>

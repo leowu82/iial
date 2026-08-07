@@ -34,3 +34,15 @@ async function loadSiteHeader() {
 loadSiteHeader().catch((error) => {
     console.error('Failed to load shared site content:', error);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    if (mobileBtn && navLinks) {
+        mobileBtn.addEventListener('click', function() {
+            // Toggle the 'active' class to show/hide the menu on mobile
+            navLinks.classList.toggle('active');
+        });
+    }
+});

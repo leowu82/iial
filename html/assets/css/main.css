@@ -8,77 +8,151 @@
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: system-ui, -apple-system, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--bg-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-a {
-    color: var(--primary-color);
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-header {
-    background-color: var(--nav-bg);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* Top University Bar */
+.top-bar {
+    background-color: #13294D; /* Illini Blue */
+    color: #FFFFFF;
+    padding: 8px 0;
+    font-size: 14px;
 }
 
-nav {
+.uni-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.block-i {
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Main Navigation Container */
+.main-header {
+    background-color: #FFFFFF;
+    border-bottom: 4px solid #E84A27; /* Illini Orange */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.25rem 2rem;
+    padding: 20px 20px;
 }
 
-.logo-container {
+/* Branding */
+.site-branding {
+    flex: 1;
+    min-width: 0;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: #13294D;
     display: flex;
     align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: var(--primary-color);
+    gap: 16px;
 }
 
-.logo-placeholder {
-    width: 44px;
-    height: 44px;
-    object-fit: contain;
+.logo {
+    width: 72px;
+    height: auto;
+    flex-shrink: 0;
     display: block;
 }
 
-.lab-name {
-    font-size: 1.25rem;
-    font-weight: 700;
+.branding-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
 }
 
+.lab-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    line-height: 1.15;
+}
+
+.lab-subtitle {
+    font-size: 14px;
+    color: #555555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 25px;
 }
 
-.nav-links li a {
+.nav-links a {
     text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    transition: color 0.2s ease;
-    padding-bottom: 5px;
+    color: #333333;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+.nav-links a:hover {
+    color: #E84A27;
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #13294D;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mobile-toggle {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }
 
 main {
