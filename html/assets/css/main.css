@@ -23,57 +23,39 @@ body {
     padding: 0 20px;
 }
 
-/* Top University Bar */
-.top-bar {
-    background-color: #13294D; /* Illini Blue */
-    color: #FFFFFF;
-    padding: 8px 0;
-    font-size: 14px;
-}
-
-.uni-link {
-    color: #FFFFFF;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-}
-
-.block-i {
-    height: 20px;
-    margin-right: 10px;
-}
-
-/* Main Navigation Container */
+/* Main Header Base */
 .main-header {
     background-color: #FFFFFF;
     border-bottom: 4px solid #E84A27; /* Illini Orange */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
 }
 
-.nav-container {
+/* Header Branding Container */
+.header-branding-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+    padding: 28px 20px 18px 20px;
 }
 
-/* Branding */
+/* Left Side: Lab Branding */
 .site-branding {
-    flex: 1;
-    min-width: 0;
+    display: flex;
+    align-items: center;
+    max-width: 62%;
 }
 
 .logo-link {
     text-decoration: none;
-    color: #13294D;
+    color: #13294D; /* Illini Blue */
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
 .logo {
-    width: 72px;
+    width: 92px;
     height: auto;
     flex-shrink: 0;
     display: block;
@@ -86,17 +68,57 @@ body {
 }
 
 .lab-title {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 700;
     margin-bottom: 4px;
     line-height: 1.15;
+    color: #13294D;
 }
 
 .lab-subtitle {
-    font-size: 14px;
-    color: #555555;
+    font-size: 15px;
+    color: #E84A27; /* Updated to Illini Orange to match typical UIUC headers */
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Right Side: University Branding */
+.uni-branding {
+    display: flex;
+    align-items: center;
+}
+
+.uni-link {
+    color: #13294D;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+
+.uni-text {
+    white-space: nowrap;
+}
+
+.block-i {
+    height: 54px; /* Scaled up slightly to balance with the lab logo */
+    width: auto;
+}
+
+/* Navigation Container (Sits below branding) */
+.nav-container {
+    display: flex;
+    padding: 0 20px 15px 20px;
+}
+
+.main-nav {
+    width: 100%;
 }
 
 /* Navigation Links */
@@ -130,15 +152,26 @@ body {
 
 /* Responsive Design */
 @media (max-width: 992px) {
-    .nav-container {
+    .header-branding-container {
         flex-direction: column;
         align-items: flex-start;
+        gap: 20px;
+    }
+
+    .site-branding {
+        max-width: 100%;
+    }
+
+    .uni-link {
+        text-align: left;
+        flex-direction: row;
+        justify-content: flex-start;
     }
 
     .mobile-toggle {
         display: block;
         position: absolute;
-        top: 60px;
+        top: 25px;
         right: 20px;
     }
 
@@ -147,7 +180,7 @@ body {
         flex-direction: column;
         width: 100%;
         gap: 15px;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .nav-links.active {

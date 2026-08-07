@@ -1,20 +1,11 @@
 <header class="main-header">
-    <!-- Top University Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <a href="https://illinois.edu" class="uni-link">
-                <!-- Ensure illinois-block-i.svg is in this path -->
-                <img src="assets/images/illinois-block-i.svg" alt="University of Illinois" class="block-i">
-                UNIVERSITY OF ILLINOIS URBANA-CHAMPAIGN
-            </a>
-        </div>
-    </div>
-
-    <!-- Main Navigation Bar -->
-    <div class="nav-container container">
+    <!-- Branding Container: Lab on Left, Uni on Right -->
+    <div class="header-branding-container container">
+        
+        <!-- Left Side: Lab Logo, Name, and Department -->
         <div class="site-branding">
             <a href="index.html" class="logo-link">
-                <img src="assets/images/logo.png" alt="Logo" class="logo">
+                <img src="assets/images/logo.png" alt="Lab Logo" class="logo">
                 <div class="branding-text">
                     <h1 class="lab-title">Information Integrity and Assessment Lab</h1>
                     <span class="lab-subtitle">School of Information Sciences</span>
@@ -22,10 +13,24 @@
             </a>
         </div>
 
+        <!-- Right Side: University Name and Logo -->
+        <div class="uni-branding">
+            <a href="https://illinois.edu" class="uni-link">
+                <!-- Ensure illinois-block-i.svg is in this path -->
+                <img src="assets/images/illinois-block-i.svg" alt="University of Illinois" class="block-i">
+                <div class="uni-text">University of Illinois<br>Urbana-Champaign</div>
+            </a>
+        </div>
+        
+        <!-- Mobile Toggle Button (Moved here for easier absolute positioning) -->
+        <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+    </div>
+
+    <!-- Main Navigation Bar (Placed below the branding) -->
+    <div class="nav-container container">
         <nav class="main-nav">
-            <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Toggle navigation">
-                &#9776;
-            </button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="people.html">People</a></li>
