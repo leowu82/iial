@@ -3,13 +3,19 @@ async function loadPartial(element, path) {
         return;
     }
 
-    const response = await fetch(path);
+    try {
+        const response = await fetch(path);
 
-    if (!response.ok) {
-        throw new Error(`Failed to load ${path}`);
+        if (!response.ok) {
+            throw new Error(`Failed to load ${path}: ${response.status}`);
+        }
+
+        element.innerHTML = await response.text();
+    } catch (err) {
+        console.error(`Failed to load partial ${path}:`, err);
+        // Graceful fallback UI
+        element.innerHTML = '<div class="partial-fallback">Content unavailable</div>';
     }
-
-    element.innerHTML = await response.text();
 }
 
 async function loadSiteHeader() {
@@ -17,8 +23,8 @@ async function loadSiteHeader() {
     const footerMount = document.querySelector('[data-footer]');
 
     await Promise.all([
-        loadPartial(headerMount, '/header.html'),
-        loadPartial(footerMount, '/footer.html')
+        loadPartial(headerMount, './header.html'),
+        loadPartial(footerMount, './footer.html')
     ]);
 
     if (headerMount) {
@@ -31,11 +37,12 @@ async function loadSiteHeader() {
     }
 }
 
-loadSiteHeader().catch((error) => {
-    console.error('Failed to load shared site content:', error);
-});
-
 document.addEventListener('DOMContentLoaded', function() {
+    // Load header/footer after DOM is ready so mounts exist
+    loadSiteHeader().catch((error) => {
+        console.error('Failed to load shared site content:', error);
+    });
+
     const mobileBtn = document.getElementById('mobile-menu-btn');
     const navLinks = document.getElementById('nav-links');
 
