@@ -258,6 +258,24 @@ footer {
     color: #555;
 }
 
+.hero .lab-statement {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.recruit-info {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: -1.25rem auto 0;
+    color: #555;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.recruit-info a {
+    color: var(--primary-color);
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
