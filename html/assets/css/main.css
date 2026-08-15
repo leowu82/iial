@@ -83,6 +83,21 @@ body {
     font-weight: 600;
 }
 
+/* School link styling */
+.school-link {
+    color: #E84A27;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.school-link:hover,
+.school-link:focus {
+    text-decoration: underline;
+}
+
 /* Right Side: University Branding */
 .uni-branding {
     display: flex;
