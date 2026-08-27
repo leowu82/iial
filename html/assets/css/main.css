@@ -400,19 +400,12 @@ footer {
 .pub-content {
     margin: 0;
     padding: 1.5rem 0 1.5rem 1.25rem;
-    /* border-bottom: 1px solid var(--border-color); */
-    /* border-left: 3px solid transparent; */
     transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .pub-content + .pub-content {
-    padding-top: 0.2rem;
+    padding-top: 1.5rem;
 }
-
-/* .pub-content:hover {
-    border-left-color: #E84A27;
-    background-color: #fffaf8;
-} */
 
 .pub-content {
     font-size: 1.0rem;
