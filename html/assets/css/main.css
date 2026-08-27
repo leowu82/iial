@@ -382,52 +382,60 @@ footer {
     color: white;
 }
 
-.year-section {
+.pub-category {
     margin-bottom: 3rem;
+    padding-top: 1.5rem;
 }
 
-.pub-item {
-    margin-bottom: 1.5rem;
+.pub-category h2 {
+    margin-bottom: 0.5rem;
+    border-bottom: 0;
+    padding-bottom: 0;
 }
 
-.pub-title {
-    font-weight: bold;
-    font-size: 1.1rem;
+.pub-list {
+    border-top: 1px solid var(--border-color);
 }
 
-.pub-authors {
-    color: #444;
+.pub-content {
+    margin: 0;
+    padding: 1.5rem 0 1.5rem 1.25rem;
+    /* border-bottom: 1px solid var(--border-color); */
+    /* border-left: 3px solid transparent; */
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-.lab-member {
-    font-weight: bold;
-    text-decoration: underline;
+.pub-content + .pub-content {
+    padding-top: 0.2rem;
 }
 
-.pub-venue {
-    font-style: italic;
-    color: #666;
+/* .pub-content:hover {
+    border-left-color: #E84A27;
+    background-color: #fffaf8;
+} */
+
+.pub-content {
+    font-size: 1.0rem;
+    line-height: 1.65;
 }
 
-.pub-links {
-    margin-top: 0.25rem;
-    font-size: 0.9rem;
+.pub-citation {
+    color: var(--text-color);
 }
 
-.pub-links a {
+.pub-link {
+    display: inline-block;
+    margin-top: 0.15rem;
     color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 700;
     text-decoration: none;
-    margin-right: 0.75rem;
-    border: 1px solid #ccc;
-    padding: 2px 8px;
-    border-radius: 3px;
-    background-color: #f8f9fa;
 }
 
-.pub-links a:hover {
-    background-color: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
+.pub-link:hover,
+.pub-link:focus {
+    color: #E84A27;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
