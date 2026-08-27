@@ -389,26 +389,21 @@ footer {
 
 .pub-category h2 {
     margin-bottom: 0.5rem;
-    border-bottom: 0;
     padding-bottom: 0;
+    border: 0;
 }
 
 .pub-list {
+    padding: 0;
+    margin: 0;
     border-top: 1px solid var(--border-color);
+    list-style: none;
 }
 
 .pub-content {
     margin: 0;
-    padding: 1.5rem 0 1.5rem 1.25rem;
-    transition: border-color 0.2s ease, background-color 0.2s ease;
-}
-
-.pub-content + .pub-content {
-    padding-top: 1.5rem;
-}
-
-.pub-content {
-    font-size: 1.0rem;
+    padding: 1rem 0 1rem 1.25rem;
+    font-size: 1rem;
     line-height: 1.65;
 }
 
