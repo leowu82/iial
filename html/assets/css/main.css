@@ -262,6 +262,9 @@ h2 {
     border-radius: 12px;
     background: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 220px;
 }
 
 .student-name {
@@ -358,6 +361,16 @@ footer {
     color: #adb5bd;
     font-size: 3rem;
     flex-shrink: 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
 }
 
 .person-info h3 {
